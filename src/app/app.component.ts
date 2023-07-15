@@ -44,4 +44,11 @@ export class AppComponent {
   updateSelectedLocation(location: HousingLocation) {
     this.selectedLocation = location;
   }
+
+}
+
+export class HousingListComponent implements OnInit {
+
+  @Input() locationList: HousingLocation[] = [];
+  ...
 }

@@ -23,6 +23,7 @@ export class HousingListComponent implements OnInit {
   }
 
   searchHousingLocations(searchText: string) {
+    if (!searchText) return;
     this.results = this.locationList.filter(
       (location: HousingLocation) => location.city
         .toLowerCase()
